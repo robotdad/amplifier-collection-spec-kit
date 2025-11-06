@@ -1,5 +1,6 @@
 # Include standard documentation
 include LICENSE
+include pyproject.toml
 include README.md
 include CODE_OF_CONDUCT.md
 include SECURITY.md

@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "amplifier-collection-spec-kit"
+name = "spec-kit"
 version = "1.0.0"
 description = "Specification-Driven Development workflow collection for Amplifier"
 readme = "README.md"
@@ -21,7 +21,7 @@ documentation = "https://github.com/robotdad/amplifier-collection-spec-kit#readm
 packages = {find = {}}
 
 [tool.setuptools.package-data]
-spec_kit = ["*.toml"]
+"*" = ["*.md", "*.toml"]
 
 [tool.amplifier.collection]
 author = "robotdad"

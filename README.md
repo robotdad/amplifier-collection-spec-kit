@@ -28,22 +28,22 @@ Spec-Kit: **Specs → Validation → Code** (specs drive everything)
 ### Installation
 
 ```bash
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@v1.0.0
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@main
 ```
 
 ### Usage
 
 ```bash
 # Specification Phase (Create formal specifications)
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:spec-writer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:spec-writer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create API specification for user authentication"
 
 # Planning Phase (Generate implementation plans)
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:planner
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:planner
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create implementation plan for specs/auth-api.md"
 
 # Implementation Phase (Execute implementation)
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:implementer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:implementer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Implement plans/auth-api.md"
 ```
 
@@ -187,7 +187,7 @@ Forces clarification before implementation.
 
 ```bash
 # === Phase 1: Specification ===
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:spec-writer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:spec-writer
 
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create API specification for payment processing"
 
@@ -203,7 +203,7 @@ uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create
 # - Ambiguity detection
 
 # === Phase 2: Planning ===
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:planner
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:planner
 
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create implementation plan for specs/payment-api.md"
 
@@ -222,7 +222,7 @@ uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create
 # - Marks parallelizable tasks [P]
 
 # === Phase 3: Implementation ===
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:implementer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:implementer
 
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Implement tasks from plans/payment-implementation.md"
 
@@ -254,13 +254,13 @@ specify init my-project
 ### New Workflow (Amplifier Collection)
 ```bash
 # Profile-based workflow
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:spec-writer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:spec-writer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create specification with constitutional governance"
 
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:planner
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:planner
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Generate implementation plan"
 
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:implementer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:implementer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Execute implementation"
 ```
 
@@ -283,7 +283,7 @@ Combine formal specifications with existing codebase integration:
 
 ```bash
 # Create formal specification (Spec-Kit)
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:spec-writer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:spec-writer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create API spec"
 
 # Update existing documentation (DDD)
@@ -305,7 +305,7 @@ uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Design payment UI components"
 
 # Specify API contracts (Spec-Kit)
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use amplifier-collection-spec-kit:spec-writer
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier profile use spec-kit:spec-writer
 uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create API spec for payment UI"
 ```
 
@@ -316,14 +316,14 @@ uvx --from git+https://github.com/microsoft/amplifier@next amplifier run "Create
 ### Via Amplifier (Recommended)
 
 ```bash
-uvx --from git+https://github.com/microsoft/amplifier@next amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@v1.0.0
+uvx --from git+https://github.com/microsoft/amplifier@next amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@main
 ```
 
 ### Specific Versions
 
 ```bash
 # Latest release
-... amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@v1.0.0
+... amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@main
 
 # Development version
 ... amplifier collection add git+https://github.com/robotdad/amplifier-collection-spec-kit@main
